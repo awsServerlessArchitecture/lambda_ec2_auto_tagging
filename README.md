@@ -26,7 +26,7 @@ This Lambda function automatically tags any newly launched EC2 instance with the
     ⚠️ Best practice: replace with a custom policy that only allows `ec2:CreateTags` and `ec2:DescribeInstances`.
 - Name the role (e.g., `LambdaEC2AutoTaggingRole`).
 
-📸 *Screenshot:* `screenshots/iam-role.png`
+📸 *Screenshot:* ![alt text](screenshots/iam-role.png)
 
 ---
 
@@ -63,7 +63,7 @@ def lambda_handler(event, context):
     }
 ```
 
-📸 *Screenshot:* `screenshots/lambda-function.png`
+📸 *Screenshot:* ![alt text](screenshots/lambda-function.png)
 
 ---
 
@@ -91,14 +91,14 @@ def lambda_handler(event, context):
      }
      ```
 
-📸 *Screenshot:* `screenshots/eventbridge-event-pattern.png`
+📸 *Screenshot:* ![alt text](screenshots/eventbridge-event-pattern.png)
 
 5. **Add Target**
    - Target: **Lambda function**
    - Select your Lambda (e.g., `AutoTagLambda`)
    - Leave permissions as default → **Create a new role for this resource**
 
-📸 *Screenshot:* `screenshots/eventbridge-target.png`
+📸 *Screenshot:* ![alt text](screenshots/eventbridge-target.png)
 
 6. **Review and Create** → click **Create rule**.
 
@@ -129,7 +129,7 @@ def lambda_handler(event, context):
    Instance i-0abcd1234ef567890 tagged with LaunchDate=2026-03-15 and Owner=AutoTagLambda
    ```
 
-📸 *Screenshot:* `screenshots/cloudwatch-logs.png`
+📸 *Screenshot:* ![alt text](screenshots/cloudwatch-logs.png)
 
 ---
 
